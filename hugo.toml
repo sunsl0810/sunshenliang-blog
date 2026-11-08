@@ -1,0 +1,81 @@
+baseURL = "https://sunshenliang.top/"
+locale = "zh-cn"
+defaultContentLanguage = "zh-cn"
+title = "孙思良的博客"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+hasCJKLanguage = true
+enableEmoji = true
+summaryLength = 70
+mainSections = ["posts"]
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  env = "production"
+  title = "孙思良的博客"
+  description = "技术笔记、读书摘要，以及一些还没想清楚的想法。"
+  keywords = ["博客", "技术", "笔记", "读书"]
+  author = "孙思良"
+  DateFormat = "2006-01-02"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowWordCount = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowPostNavLinks = true
+  ShowToc = true
+  TocOpen = false
+  ShowShareButtons = false
+  ShowLastMod = true
+  comments = false
+
+  [params.homeInfoParams]
+    Title = "你好，我是孙思良"
+    Content = "这里记录技术笔记、读书摘要，以及一些还没想清楚的想法。慢慢写，长期更新。"
+
+  [[params.socialIcons]]
+      name = "github"
+      url = "https://github.com/"
+    [[params.socialIcons]]
+      name = "rss"
+      url = "/index.xml"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "archives"
+    name = "归档"
+    url = "/archives/"
+    weight = 20
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 30
+  [[menu.main]]
+    identifier = "search"
+    name = "搜索"
+    url = "/search/"
+    weight = 40
+  [[menu.main]]
+    identifier = "about"
+    name = "关于"
+    url = "/about/"
+    weight = 50
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+  [markup.goldmark.renderer]
+    unsafe = true
